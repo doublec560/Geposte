@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* gepost Design System - Sistema de design moderno para gestão de redes sociais
+Cores principais: Azul escuro, Branco, Laranja accent
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* gepost Brand Colors */
+    --brand-primary: 222 84% 8%;        /* Azul escuro #0B132B */
+    --brand-accent: 24 100% 63%;        /* Laranja vibrante #FF8C42 */
+    --brand-accent-hover: 24 100% 58%;  /* Laranja hover */
+    
+    /* Light Mode */
+    --background: 0 0% 98%;              /* Quase branco #F8F9FA */
+    --foreground: 222 84% 8%;            /* Azul escuro */
+
+    --card: 0 0% 100%;                   /* Branco puro */
+    --card-foreground: 222 84% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 8%;
+
+    --primary: 222 84% 8%;               /* Azul escuro principal */
+    --primary-foreground: 0 0% 100%;     /* Branco */
+
+    --secondary: 220 14% 96%;            /* Cinza muito claro */
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 96%;                /* Fundo suave */
+    --muted-foreground: 215 16% 47%;     /* Texto secundário */
+
+    --accent: 24 100% 63%;               /* Laranja accent */
+    --accent-foreground: 0 0% 100%;      /* Branco sobre accent */
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;               /* Bordas suaves */
+    --input: 220 13% 91%;
+    --ring: 24 100% 63%;                 /* Ring laranja */
+
+    --radius: 0.75rem;                   /* Bordas mais arredondadas */
+    
+    /* gepost Custom Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(222 84% 8%), hsl(222 84% 12%));
+    --gradient-accent: linear-gradient(135deg, hsl(24 100% 63%), hsl(24 100% 68%));
+    --shadow-elegant: 0 10px 30px -10px hsl(222 84% 8% / 0.1);
+    --shadow-accent: 0 8px 25px -8px hsl(24 100% 63% / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - gepost */
+    --background: 222 84% 6%;            /* Azul muito escuro */
+    --foreground: 0 0% 98%;              /* Branco quase puro */
+
+    --card: 222 84% 8%;                  /* Cards ligeiramente mais claros */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 84% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;                 /* Branco no modo escuro */
+    --primary-foreground: 222 84% 8%;    /* Azul escuro */
+
+    --secondary: 222 32% 15%;            /* Cinza azulado escuro */
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 222 32% 15%;                /* Fundo suave escuro */
+    --muted-foreground: 215 20% 65%;     /* Texto secundário */
+
+    --accent: 24 100% 63%;               /* Mantém laranja accent */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 32% 18%;               /* Bordas escuras */
+    --input: 222 32% 18%;
+    --ring: 24 100% 63%;                 /* Ring laranja */
+    
+    /* Sidebar Dark Mode */
+    --sidebar-background: 222 84% 4%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 24 100% 63%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 32% 12%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 222 32% 15%;
+    --sidebar-ring: 24 100% 63%;
+    
+    /* Dark Mode Custom Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(222 84% 6%), hsl(222 84% 10%));
+    --gradient-accent: linear-gradient(135deg, hsl(24 100% 63%), hsl(24 100% 68%));
+    --shadow-elegant: 0 10px 30px -10px hsl(222 84% 4% / 0.3);
+    --shadow-accent: 0 8px 25px -8px hsl(24 100% 63% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Social Media Brand Colors */
+.social-facebook {
+  color: #1877F2;
+}
+
+.social-instagram {
+  background: linear-gradient(45deg, #E4405F, #FFDC80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.social-twitter {
+  color: #1DA1F2;
+}
+
+.social-linkedin {
+  color: #0A66C2;
+}
+
+.social-youtube {
+  color: #FF0000;
+}
+
+/* For solid background versions */
+.social-facebook-bg {
+  background-color: #1877F2;
+  color: white;
+}
+
+.social-instagram-bg {
+  background: linear-gradient(45deg, #E4405F, #FFDC80);
+  color: white;
+}
+
+.social-twitter-bg {
+  background-color: #1DA1F2;
+  color: white;
+}
+
+.social-linkedin-bg {
+  background-color: #0A66C2;
+  color: white;
+}
+
+.social-youtube-bg {
+  background-color: #FF0000;
+  color: white;
+}
